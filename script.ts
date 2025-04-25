@@ -113,3 +113,11 @@ button.addEventListener('click', () => {
 
 
 inicializarLienzo();
+const btnDescargar = document.getElementById('btnDescargar') as HTMLButtonElement;
+
+btnDescargar.addEventListener('click', () => {
+  const link = document.createElement('a');
+  link.download = 'qr_simulado.png';
+  link.href = canvas.toDataURL('image/png');
+  link.click();
+});
