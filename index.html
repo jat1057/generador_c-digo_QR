@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>QR Simulado</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: #f0f0f0;
+    }
+
+    #controls {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    input, button {
+      padding: 10px;
+      font-size: 16px;
+      margin: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background-color: #007bff;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    canvas {
+      border: 2px solid black;
+      background-color: white;
+    }
+  </style>
+</head>
+<body>
+  <div id="controls">
+   <h2>GENERADOR CODIGO QR APARTIR DE UNA URL</h2>
+    <input type="text" id="urlInput" placeholder="Ingresa una URL" />
+    
+    <button id="generateButton">Generar QR</button>
+  </div>
+  <canvas id="qrCanvas" width="500" height="500"></canvas>
+  <script src="script.js"></script>
+</body>
+</html>
